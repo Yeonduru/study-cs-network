@@ -61,7 +61,7 @@ Radio : no physical wire , 장애물에 의해서 전달되기 때문에 reflect
 * FDM : 사용자별로 별도의 frequency를 할당받는다.
 * TDM : 사용자별로 시간별로 돌아가면서 사용한다.
 
-![](D:\_User\Desktop\images02.PNG)
+![](images02.PNG)
 
 
 
@@ -76,13 +76,13 @@ Radio : no physical wire , 장애물에 의해서 전달되기 때문에 reflect
 * 한 링크가 오랜시간 dominate되어 있으면 다른 사용자의 데이터가 전송되지를 못한다. 따라서 hosts가 메시지를 packet단위로 자르고 목적지 주소가 명시되어있다. packet의 크기가 정해져있다면 링크를 점유하는 시간이 정해져있게된다. Router는 packet의 주소를 보고 어디로 보내줄지 판단하여 데이터를 보내준다. 받으면서 동시에 내보내는 것은 불가능하고, 데이터가 다 올때까지 store하고 다 도착하면 주소를 parsing하여 어느 링크로 parsing해서 보내야하는지 정한다. (Store and Forward)
 * **Store and Forward** :
 
-![](D:\_User\Desktop\images03.PNG)
+![](images03.PNG)
 
 store and forward 방식의 단점으로 인해서 end-end delay = 2L/R ( assuming zero propagation delay)가 생기게 된다. 
 
 **queuing and loss** (congestion) :
 
-![](D:\_User\Desktop\images04.PNG)
+![](images04.PNG)
 
 Router가 packet을 내보내는 속도보다 들어오는 속도가 더 빠르면 발생한다. packet들이 쌓이게되면서..
 
@@ -108,7 +108,7 @@ Router가 packet을 내보내는 속도보다 들어오는 속도가 더 빠르�
 
 인터넷 사업자가 global ISP를 통해 연결된 라우터들을 가지고 있다. 우리가 케이블 회사등에 돈을 지불하듯이, 케이블 회사등도 global ISP에 돈을 내고 서비스를 사용하는것이다.  Global ISP도 여러개가 있다. 그럼 Global ISP들끼리는 또 어떻게 연결되어야할까? --> 서로간에 peering link를 가지고 있게된다. (Internet Exchange Point (IXP) 사업자들도 따로 존재한다.)
 
-![](D:\_User\Desktop\images05.PNG)
+![](images05.PNG)
 
 또 regional ISP도 있고... (작은 지역담당 -> 큰 지역담당 등으로 hierarchical 하게 존재한다 , Multi-tier hierarchy !)
 
@@ -131,5 +131,5 @@ Ex) Google
 - Tries to bypass  upper tier ISP by directly connecting lower tier ISPs or thourh IXPs
 - Still, some access ISPs are reachable through connections on tier-1 ISPs
 
-![](D:\_User\Desktop\images06.PNG)
+![](images06.PNG)
 
