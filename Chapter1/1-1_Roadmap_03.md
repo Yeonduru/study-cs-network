@@ -1,6 +1,6 @@
 # 1. Four sources of packet delay 
 
-![](1-3-1.png)
+![](../images/1-3-1.png)
 $$
 d_{\rm nodal} = d_{\rm proc} + d_{\rm queue} + d_{\rm trans} + d_{\rm prop}
 $$
@@ -48,7 +48,7 @@ La/R >= 1 : more ''work' arriving than can be serviced, average delay infinite!
 
 
 
-![](1-3-2.PNG)
+![](../images/1-3-2.png)
 
 # 2. Packet Loss 
 
@@ -60,7 +60,7 @@ La/R >= 1 : more ''work' arriving than can be serviced, average delay infinite!
 
 throughput : 단위시간당 전송된 트래픽의 양은 더 capacity가 작은 링크에 의해서 결정된다. 
 
-![](1-3-3.PNG)
+![](../images/1-3-3.png)
 
 Bottleneck link : link on end-end path that constrains end-end throughput 
 
@@ -84,11 +84,11 @@ Bottleneck link : link on end-end path that constrains end-end throughput
 
 application에서 user message를 만들면 transport 계층에 process to process data transfer를 요청. transport 계층은 network계층에 host to host delivery 를 요청한다. 
 
-![](1-3-4.PNG)
+![](../images/1-3-4.png)
 
 
 
-![](1-3-5.PNG)
+![](../images/1-3-5.png)
 
 
 
@@ -130,7 +130,7 @@ ex) **Botnet** is a set of compromised computers used for spam or DDoS attacks (
 
 
 
-![](1-3-6.PNG)
+![](../images/1-3-6.png)
 
 
 

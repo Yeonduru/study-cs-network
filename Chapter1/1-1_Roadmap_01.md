@@ -23,7 +23,7 @@
 
 * **link** : router & switch 또는 host & route 들을 연결해주는 것. 물리적인 실제 회선
 
-![image alt text](image_0.png)
+![image alt text](../images/1-1-1.png)
 
 * router, switch 는 덩어리/뭉치로 연결되어 있음. 그래서 인터넷은 **네트워크들의 네트워크**
 
@@ -55,7 +55,7 @@
 
 # 4. 프로토콜 계층
 
-![image alt text](image_1.png)
+![image alt text](../images/1-1-2.png)
 
 * **아래계층**으로 내려갈수록 **물리적인** 네트워크 컴포넌트에 더 직접적으로 연관되어 있음
 
@@ -91,7 +91,7 @@
 
 # 6. Access network - 전화 회사
 
-![image alt text](image_2.png)
+![image alt text](../images/1-1-3.png)
 
 * DSL : digital subscriber line (예전 약어)
 
@@ -114,7 +114,7 @@
 
 # 7. Access network - 케이블 회사
 
-![image alt text](image_3.png)
+![image alt text](../images/1-1-4.png)
 
 * CMTS : Cable Modem Termination System
 
@@ -134,7 +134,7 @@
 
 # 8. Access network - Home network
 
-![image alt text](image_4.png)
+![image alt text](../images/1-1-5.png)
 
 * 기기 -> home network -> 전화/케이블회사 network -> 인터넷
 
@@ -146,7 +146,7 @@
 
 # 9. Enterprise access network
 
-![image alt text](image_5.png)
+![image alt text](../images/1-1-6.png)
 
 * end system 들이 훠어얼씬 많음. router 하나 가지고는 안됨 -> **ethernet switch**
 
@@ -180,7 +180,7 @@
 
 # 10. Wireless access network
 
-![image alt text](image_6.png)
+![image alt text](../images/1-1-7.png)
 
 * (회사/학교) 폰 -> WAP -> ethernet switch -> router -> isp 
 

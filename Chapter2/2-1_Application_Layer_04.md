@@ -4,7 +4,7 @@
 
 - SMTP가 push하는 프로토콜이라면, Mail Access Protocol은 pull하는 프로토콜
 
-![캡처](../images/2-1-15.PNG)
+![캡처](../images/2-1-15.png)
 
 - 전통의 POP, 업그레이드 된 IMAP, 웹메일에는 HTTP.
 
@@ -95,7 +95,7 @@
 
 - **Iterated query**: Mapping을 가지고 있지 않을 때, 이를 알고 있는 서버를 알려줌.
 
-  ![캡처](../images/2-1-16.PNG)
+  ![캡처](../images/2-1-16.png)
 
 - **Recursive query**: Mapping을 가지고 있지 않을 때, 이를 가지고 있는 서버에 스스로 요청. 상위 hierarchy의 로드가 커진다.
 

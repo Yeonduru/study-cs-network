@@ -17,7 +17,7 @@
 
 #### 시나리오
 
-![캡처](../images/2-1-11.PNG)
+![캡처](../images/2-1-11.png)
 
 1. 사용자가 Client에서 웹사이트를 최초로 접속(request).
 2. Server는 사용자에 따른 **unique id를 생성**하고(이 id는 서비스마다 따로 관리됨).
@@ -65,7 +65,7 @@
 
 #### 예시
 
-![캡처](../images/2-1-12.PNG)
+![캡처](../images/2-1-12.png)
 
 - Intitutional network는 access link로 internet의 pop(point of presence)에 연결됨.
 - Access link의 bandwidth가 충분하지 않으면 utilization(traffic intensity)이 높아져 access delay가 엄청 커진다.
@@ -102,7 +102,7 @@
 
 - **mail protocols**(SMTP, POP4, IMAP 등)
 
-  ![캡처](../images/2-1-13.PNG)
+  ![캡처](../images/2-1-13.png)
 
 
 
@@ -114,7 +114,7 @@
 
 
 
-![캡처](../images/2-1-14.PNG)
+![캡처](../images/2-1-14.png)
 
 Telnet으로 접속해봤는데, 요즘 웬만한 웹메일서버는 교수님이 보여주신 Sample SMTP interaction이 보안상 불가능합니다(https://stackoverflow.com/questions/10509699/must-issue-a-starttls-command-first). 해보실 분은 여기의 예제와 명령어들을 참고(https://www.samlogic.net/articles/smtp-commands-reference.htm).
 
