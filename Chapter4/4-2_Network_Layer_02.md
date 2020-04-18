@@ -187,7 +187,7 @@ IP는 8비트 4자리로 표현하고 이를 보통 10진법으로 각 자리수
 
   
 
-- DHCP
+- DHCP(Dynamic Host Configuration Protocol)
   - 호스트가 존재함을 알리고 인정해주는 메시지(discover, offer)
   - IP 주소 요청을 보내고 IP주소 할당을 알리는 등의 내용이 정리돼 있다. (request, ack)
 
@@ -210,12 +210,56 @@ DHCP의 ack에는 단순히 IP 주소보다 더 많은 내용들을 담고 있�
 
 Q. 서브넷들의 주소는 어떻게 할당될까?
 
+- ISP가 갖고 있는 공간중 부분을 할당 받게 됩니다.
+
+  - ![image-20200418090508645](C:\projects\study-cs-network\images\4-2-17)
+
+  - ISP가 20칸 블록을 갖고 있고 subnet에 23이하를 각각 할당하는 경우, ISP는 각 organization들을 구분하기 위핸 비트로 3비트를 활용하고, 나머지들을 각 서브넷들이 알아서 할당하게 만듬
+
+    
+
+- IP주소가 할당된 서브넷들은 ISP를 향해 통신하게 된다.
+
+![image-20200418090222528](C:\projects\study-cs-network\images\4-2-16)
+
+ 만약 특정 orginization이 다른 ISP를 할당받게되면, 더 긴 prefix를 가진 정보를 advertise함으로써 인터넷에서 기존에 속해있던 ISP(위 예에서 20개)가 아니라 더 긴 정보가 매칭되는 ISP향해 요청을 보내게 된다. (위 예에서 23개)
+
+- Longest prefix matching : 포워딩 테이블에서 주소를 찾아갈 때 가장 긴 프리픽스를 가진 목적지를 향해 찾아가는 것
+
+  
+
+ISP들은 한국 인터넷 정보센터로부터 주소 블록을 받게 된다. 
 
 
 
+----
 
-### Network layer
+![image-20200418091413734](C:\projects\study-cs-network\images\4-2-18)
 
-transport 계층의 segment를 host to host delivery 해주는 것이 목적
+NAT는 DHCP와 같은 목적인 IP주소의 효율적인 활용을 위해 생겼다. 
 
-네트워크 계층 헤더를 붙여서 segment를 encapsulate 해서 datagrams를 생성
+로컬 네트워크 내에서 독자적인 IP주소를 활용하고 외부와는 한개 IP로 통신함으써 많은 다른 호스트들이 한번에 통신가능하게 만들 수 있다.
+
+NAT를 씀으로써 얻어질 수 있는 장점은 
+
+- 모든 기기를 활용하는데 단 1개의 IP만 필요해지게 된다.
+- 내부 망 안에서 아이피 변경을 외부에 알릴 필요 없이 자유롭게 할 수 있다.
+- 개별 디바이스들의 주소가 외부에 명시적으로 알려지지 않아 보안상 이점이 있다.
+
+이 있다.
+
+
+
+로걸에서 나가는 모든 데이터들은 NAT라우터를 통해 나간다. NAT라우터는 NAT를 사용하는 호스트들의 요청이 들어오면 각각의 서브넷 호스트들에게 포트 번호를 할당하고 요청을 IP주소로 바꿔 외부에 내보내게 된다. 이 정보들은 translation table에 기록해 둔다.
+
+ 이에 따라 외부에서 오는 응답도 NAT가 외부에 공유하는 IP주소와 PORT를 통해 받고 NAT translation table(각 포트별로 호스트 주소들을 매칭시켜둔 테이블)에 따라 서브넷 호스트들에게 받은 datagram들을 전달해줍니다. 
+
+
+
+NAT는 16비트 포트 숫자를 가질 수 있으므로 약 6만개의 커넥션을 동시에 다룰 수 있다.
+
+하지만,
+
+- Transport 레이어의 해더에 변형을 가하게 된다는 점
+- 
+
